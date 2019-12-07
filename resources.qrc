@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>res/icons/control_pause_blue.png</file>
+        <file>res/icons/control_play_blue.png</file>
+        <file>res/icons/arrow_refresh.png</file>
+        <file>res/icons/fruit_lime.png</file>
+        <file>res/icons/emotion_tomato.png</file>
+    </qresource>
+</RCC>
