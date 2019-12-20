@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>308</width>
-    <height>125</height>
+    <width>236</width>
+    <height>158</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,9 +25,7 @@
     <enum>Qt::WheelFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">QHBoxLayout {
-border: 1px dashed black;
-}</string>
+    <string notr="true"/>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,0">
     <property name="spacing">
@@ -37,7 +35,7 @@ border: 1px dashed black;
      <number>0</number>
     </property>
     <property name="topMargin">
-     <number>6</number>
+     <number>0</number>
     </property>
     <property name="rightMargin">
      <number>0</number>
@@ -47,18 +45,19 @@ border: 1px dashed black;
     </property>
     <item>
      <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>6</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="font">
        <font>
-        <family>Hack</family>
-        <pointsize>16</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
+        <pointsize>50</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
-border: 1px dashed blue;
-}</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>25:00</string>
@@ -69,25 +68,41 @@ border: 1px dashed blue;
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>7</number>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
-      <item>
-       <widget class="QPushButton" name="goButton">
-        <property name="text">
-         <string>Resume</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="resetButton">
-        <property name="text">
-         <string>Reset</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="goButton">
+           <property name="text">
+            <string>Resume</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="resetButton">
+           <property name="text">
+            <string>Reset</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/res/icons/arrow_refresh.png</normaloff>:/icons/res/icons/arrow_refresh.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </item>
     <item>
      <widget class="QLabel" name="status_label">
@@ -95,20 +110,75 @@ border: 1px dashed blue;
        <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
-border: 1px dashed red;
-}</string>
+       <string notr="true"/>
       </property>
       <property name="text">
-       <string>asdfasdfa</string>
+       <string>Sessions</string>
       </property>
       <property name="margin">
        <number>0</number>
+      </property>
+      <property name="indent">
+       <number>3</number>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>236</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Pomodoro</string>
+    </property>
+    <addaction name="actionOptions"/>
+    <addaction name="actionAlways_On_Top"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/res/icons/information.png</normaloff>:/icons/res/icons/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/res/icons/setting_tools.png</normaloff>:/icons/res/icons/setting_tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Options</string>
+   </property>
+  </action>
+  <action name="actionAlways_On_Top">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Always On Top</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="resources.qrc"/>

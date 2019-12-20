@@ -1,0 +1,16 @@
+Pomodoro (December 2019)
+
+Copyright (C) 2019 - Kevin Kainan Li
+MIT License
+
+Fatcow icons from
+https://www.fatcow.com/free-icons
+(CC Attribution 3.0)
+
+Doorbell sound from
+http://soundbible.com/2160-Old-Fashion-Door-Bell.html
+(CC Attribution 3.0)
+
+IBM Plex Mono Font from
+https://www.ibm.com/plex/
+(SIL Open Font)

@@ -5,5 +5,16 @@
         <file>res/icons/arrow_refresh.png</file>
         <file>res/icons/fruit_lime.png</file>
         <file>res/icons/emotion_tomato.png</file>
+        <file>res/icons/information.png</file>
+        <file>res/icons/setting_tools.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>res/sounds/bell.wav</file>
+    </qresource>
+    <qresource prefix="/text">
+        <file>res/text/about.txt</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>res/fonts/IBMPlexMono-Bold.ttf</file>
     </qresource>
 </RCC>
